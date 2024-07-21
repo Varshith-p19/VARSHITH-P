@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Record Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: black;">
+    <div class="container">
+        <div class="cube">
+            <div class="face front">
+                <div class="pile" data-sub-items="Finance,Manufacturing">Industries</div>
+                <div class="pile" data-sub-items="AI Process Optimization,AI Energy Management,AI Relevancy">AI
+                    Application</div>
+                <div class="pile"
+                    data-sub-items="Generative AI for Financial Services,Generative AI for Manufacturing,Generative AI for Healthcare">
+                    Generative AI</div>
+                <div class="pile"
+                    data-sub-items="Generative AI for Customer Service,Generative AI for Finance,Generative AI for Sales (CRM)">
+                    AI Business Process</div>
+                <div class="pile"
+                    data-sub-items="Generative AI for Salesforce,Generative AI for SAP,Generative AI for Oracle NetSuite">
+                    AI Enterprise System</div>
+                <div class="pile" data-sub-items="Azure Web Services,Amazon Web Services,Google Cloud">Cloud
+                    Marketplaces</div>
+            </div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+    <div class="selected-container">
+        <div class="sub-items top-sub-items"></div>
+        <div class="main-item"></div>
+        <div class="sub-items bottom-sub-items"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

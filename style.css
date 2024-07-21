@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateY(12deg) rotateX(-10deg);
+    transition: transform 0.5s ease;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.face.front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.face.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.face.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.face.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.face.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.face.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.pile {
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e7f1ff;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 140px;
+    text-align: center;
+}
+
+.selected-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.selected-container .main-item,
+.selected-container .sub-items {
+    width: 180px;
+    text-align: center;
+}
+
+.selected-container .main-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #e7f1ff;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sub-items {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.sub-item {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.sub-item.show {
+    transform: translateY(0);
+    opacity: 1;
+}
